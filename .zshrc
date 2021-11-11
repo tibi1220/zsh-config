@@ -2,20 +2,18 @@
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
-# some useful options (man zshoptions)
-setopt autocd extendedglob nomatch menucomplete
+# Allow interactive comments
 setopt interactive_comments
-stty stop undef # Disable ctrl-s to freeze terminal.
-zle_highlight=('paste:none')
 
-# completions
+# Tab into ls completions
 autoload -Uz compinit
 zstyle ':completion:*' menu select
-# zstyle ':completion::complete:lsof:*' menu yes select
+zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
-# compinit
-_comp_options+=(globdots) # Include hidden files.
+compinit
+_comp_options+=(globdots)
 
+# History navigation
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -32,6 +30,7 @@ zsh_add_file ".zsh_aliases"
 zsh_add_file ".zsh_prompt"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-# zsh_add_plugin "marlonrichert/zsh-autocomplete"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
+
+# zsh_add_plugin "marlonrichert/zsh-autocomplete"
