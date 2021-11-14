@@ -3,26 +3,35 @@ autoload -U colors && colors
 setopt promptsubst
 
 shpwd() {
-  echo ${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}
+  if [[ $(pwd) == ~ ]]; then
+    echo "~"
+  else
+    RETVALUE="${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}"
+    if [[ $RETVALUE == //* ]]; then
+      echo ${RETVALUE:1}
+    else
+      echo ${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}
+    fi
+  fi
 }
 
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
-+vi-git-untracked(){
-    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-        git status --porcelain | grep '??' &> /dev/null ; then
-        # This will show the marker if there are any untracked files in repo.
-        # If instead you want to show the marker only if there are untracked
-        # files in $PWD, use:
-        #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
-        hook_com[staged]+='T'
-    fi
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == 'true' ]] &&
+    git status --porcelain | grep '??' &>/dev/null; then
+    # This will show the marker if there are any untracked files in repo.
+    # If instead you want to show the marker only if there are untracked
+    # files in $PWD, use:
+    #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
+    hook_com[staged]+='T'
+  fi
 }
 
 # TODO: configure git status
-zstyle ':vcs_info:*' unstagedstr 'uns' 
+zstyle ':vcs_info:*' unstagedstr 'uns'
 zstyle ':vcs_info:*' stagedstr 'sta'
 
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
@@ -32,9 +41,3 @@ zstyle ':vcs_info:git:*' formats "%{$fg_bold[green]%} (%{$fg[yellow]%}%b%{$fg[gr
 PS1='%{${fg[green]}%}[%{${fg[blue]}%}$(shpwd)%{${fg[green]}%}]%{${reset_color}%}'
 PS1+='${vcs_info_msg_0_}'
 PS1+="%(?.%{$fg[green]%}.%{$fg[red]%})%B ➜%b "
-
-# old from oh-my-zsh
-# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[green]%}(%{$fg[yellow]%}"
-# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}) %{$fg[red]%}✗"
-# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%})"

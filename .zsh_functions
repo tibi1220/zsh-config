@@ -1,8 +1,15 @@
 #!/bin/zsh
 
+# Source changes without opening a new terminal window
+function reload() {
+  source "$ZDOTDIR/.zshrc"
+}
+
+alias zsh-reload='reload'
+
 # Function to source non cloned plugins
 function zsh_source_custom() {
-  for f in $ZSH_CUSTOM_PLUGINS/*.plugin.zsh; do source $f; done
+  for f in $ZSH_CUSTOM_PLUGINS/**/*.plugin.zsh; do source $f; done
 }
 
 # Function to source files if they exist
