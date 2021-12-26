@@ -1,8 +1,12 @@
 #!/bin/zsh
 
 # custom directories for zsh
-export ZSH_CUSTOM_PLUGINS="$ZDOTDIR/custom/plugins"
-export ZSH_PLUGINS="$ZDOTDIR/plugins"
+export ZSH_CUSTOM_PLUGINS=$ZDOTDIR/custom/plugins
+export ZSH_PLUGINS=$ZDOTDIR/plugins
+
+# other custom directories
+export CODEDIR=$HOME/Documents/Code
+export LATEXDIR=$HOME/Documents/LaTeX
 
 # brew generated code
 export HOMEBREW_PREFIX="/opt/homebrew"

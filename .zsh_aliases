@@ -15,9 +15,13 @@ alias ls='ls --color=auto'
 
 # Change to working directories
 alias r='cd /'
-alias c='cd ~/Documents/Code'
-alias l='cd ~/Documents/LaTeX'
-alias z='cd $ZDOTDIR'
-alias g3='cd ~/Documents/LaTeX/G3-jegyzet-new'
+alias c="cd $CODEDIR"
+alias l="cd $LATEXDIR"
+alias z="cd $ZDOTDIR"
+alias g3="cd $LATEXDIR/G3-jegyzet-new"
 alias bme='cd ~/Documents/00BMEGE'
 alias cme='cd ~/Documents/00BMEGE/2021-22-o'
+
+# History
+alias hist="history 0"
+alias sist="history 0 | grep"
