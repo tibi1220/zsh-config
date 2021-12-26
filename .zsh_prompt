@@ -275,7 +275,7 @@ function git_prompt_status() {
   done
 
   if [[ $status_prompt != '' ]]; then
-    status_prompt+="%{$fg[green]%}}"
+    status_prompt+="%{$fg[green]%}⟩"
   fi
   echo $status_prompt
 }
@@ -301,17 +301,18 @@ function git_repo_name() {
   fi
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[green]%} (%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%} (%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}) %{$fg[green]%}{"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}) %{$fg[green]%}⟨"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%})"
 
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%}a"      #
-ZSH_THEME_GIT_PROMPT_MODIFIED="%F{214}m%f"       #
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}d"     #✖
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%}r" #➜
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%}x" #═
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[blue]%}u"  #✭
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%}%Ba%b"      #
+# ZSH_THEME_GIT_PROMPT_MODIFIED="%F{214}m%f"     #
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}%Bm%b" #
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}%Bd%b"     #✖
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%}%Br%b" #➜
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%}%Bx%b" #═
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}%Bu%b"  #✭
 
 
 
