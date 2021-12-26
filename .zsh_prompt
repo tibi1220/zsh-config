@@ -6,9 +6,9 @@ shpwd() {
   if [[ $(pwd) == ~ ]]; then
     echo "~"
   else
-    RETVALUE="${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}"
-    if [[ $RETVALUE == //* ]]; then
-      echo ${RETVALUE:1}
+    local retvalue="${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}"
+    if [[ $retvalue == //* ]]; then
+      echo ${retvalue:1}
     else
       echo ${${:-/${(j:/:)${(M)${(s:/:)${(D)PWD:h}}#(|.)[^.]}}/${PWD:t}}//\/~/\~}
     fi
