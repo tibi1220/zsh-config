@@ -15,12 +15,15 @@ alias fgrep='fgrep --color=auto'
 
 # Colored ls
 alias ls='ls --color=auto'
+alias ll='exa -la'
+alias la='exa -a'
 
 # Change to working directories
 alias r='cd /'
 alias c="cd $CODEDIR"
 alias l="cd $LATEXDIR"
 alias z="cd $ZDOTDIR"
+alias v="cd $VIMDIR"
 alias g3="cd $LATEXDIR/G3-jegyzet-new"
 alias bme='cd ~/Documents/00BMEGE'
 alias cme='cd ~/Documents/00BMEGE/2021-22-o'
@@ -28,3 +31,16 @@ alias cme='cd ~/Documents/00BMEGE/2021-22-o'
 # History
 alias hist="history 0"
 alias sist="history 0 | grep"
+
+# Homebrew aliases
+alias bup="brew upgrade && brew update"
+alias bslist="brew services list"
+alias bsstart="brew services start"
+alias bsstop="brew services stop"
+
+# Git aliases
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit -m"
+alias gp="git push"
