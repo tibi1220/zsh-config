@@ -26,7 +26,7 @@ alias z="cd $ZDOTDIR"
 alias v="cd $VIMDIR"
 alias g3="cd $LATEXDIR/G3-jegyzet-new"
 alias bme='cd ~/Documents/00BMEGE'
-alias cme='cd ~/Documents/00BMEGE/2021-22-o'
+alias cme='cd ~/Documents/00BMEGE/2021-22-t'
 
 # History
 alias hist="history 0"
@@ -44,3 +44,6 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit -m"
 alias gp="git push"
+
+# Other aliases
+alias lg="lazygit"

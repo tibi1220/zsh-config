@@ -13,7 +13,11 @@ export VIMDIR=$HOME/.config/nvim
 export VIMRC=$VIMDIR/init.lua
 
 # directories
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
+
+# Puppeter chromium fix
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
 # brew generated code
 export HOMEBREW_PREFIX="/opt/homebrew"
@@ -22,3 +26,4 @@ export HOMEBREW_REPOSITORY="/opt/homebrew"
 export PATH="$ZDOTDIR/scripts:/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
