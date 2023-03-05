@@ -26,7 +26,7 @@ alias z="cd $ZDOTDIR"
 alias v="cd $VIMDIR"
 alias g3="cd $LATEXDIR/G3-jegyzet-new"
 alias bme='cd ~/Documents/00BMEGE'
-alias cme='cd ~/Documents/00BMEGE/2022-23-o'
+alias cme='cd ~/Documents/00BMEGE/2022-23-t'
 
 # History
 alias hist="history 0"
@@ -48,5 +48,3 @@ alias gp="git push"
 # Other aliases
 alias lg="lazygit"
 alias m-dl="youtube-dl --prefer-ffmpeg --extract-audio --audio-format mp3"
-
-alias vnew="nvim -u ~/.config/nvim-new/init.lua"
