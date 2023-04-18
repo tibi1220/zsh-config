@@ -12,6 +12,9 @@ export LATEXDIR=$HOME/Documents/LaTeX
 export VIMDIR=$HOME/.config/nvim
 export VIMRC=$VIMDIR/init.lua
 
+# Git verify commits
+export GPG_TTY=$(tty)
+
 # directories
 # source $HOME/.cargo/env
 
