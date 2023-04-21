@@ -1,6 +1,0 @@
-{
-  "files.associations": {
-    ".zsh*": "shellscript",
-    ".zprofile*": "shellscript"
-  }
-}

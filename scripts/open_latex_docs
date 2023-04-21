@@ -1,9 +1,0 @@
-#!/bin/sh
-
-local filename=$1;
-
-if [[ $1 == \\usepackage* ]]; then
-  filename=$(echo $1 | cut -d "{" -f2 | cut -d "}" -f1)
-fi
-
-texdoc $filename
