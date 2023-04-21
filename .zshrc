@@ -1,5 +1,9 @@
 #!/bin/zsh
-HISTFILE=~/.zsh_history
+
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
+HISTFILE=$ZDOTDIR/.zsh_history
 setopt appendhistory
 
 # Allow interactive comments

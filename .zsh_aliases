@@ -24,7 +24,6 @@ alias c="cd $CODEDIR"
 alias l="cd $LATEXDIR"
 alias z="cd $ZDOTDIR"
 alias v="cd $VIMDIR"
-alias g3="cd $LATEXDIR/G3-jegyzet-new"
 alias bme='cd ~/Documents/00BMEGE'
 alias cme='cd ~/Documents/00BMEGE/2022-23-t'
 
@@ -42,7 +41,7 @@ alias bsstop="brew services stop"
 alias gs="git status"
 alias ga="git add"
 alias gaa="git add --all"
-alias gc="git commit -m"
+alias gc="git commit -S -m"
 alias gp="git push"
 
 # Other aliases
