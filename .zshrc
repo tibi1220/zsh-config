@@ -1,43 +1,18 @@
 #!/usr/bin/env zsh
 
-export HISTSIZE=1000000000
-export SAVEHIST=$HISTSIZE
-setopt EXTENDED_HISTORY
-HISTFILE=$ZDOTDIR/.zsh_history
-setopt appendhistory
+# Source own files
+source "$ZDOTDIR/.zsh/options.zsh"
+source "$ZDOTDIR/.zsh/exports.zsh"
+source "$ZDOTDIR/.zsh/aliases.zsh"
+source "$ZDOTDIR/.zsh/prompt.zsh"
+source "$ZDOTDIR/.zsh/functions.zsh"
 
-# Allow interactive comments
-setopt interactive_comments
-
-# Tab into ls completions
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-zstyle ':completion::complete:lsof:*' menu yes select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-# History navigation
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-# Colors
-autoload -Uz colors && colors
-
-# Useful Functions
-source "$ZDOTDIR/.zsh_functions"
-zsh_add_file ".zsh_exports"
-
+# Source plugins (from custom directory)
 zsh_source_custom
 
-zsh_add_file ".zsh_aliases"
-zsh_add_file ".zsh_prompt"
-
+# Source plugins (from git)
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
-
+# zsh_add_plugin "jeffreytse/zsh-vi-mode"
 # zsh_add_plugin "marlonrichert/zsh-autocomplete"

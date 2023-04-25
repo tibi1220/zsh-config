@@ -28,8 +28,8 @@ alias bme='cd ~/Documents/00BMEGE'
 alias cme='cd ~/Documents/00BMEGE/2022-23-t'
 
 # History
-alias hist="history 0"
-alias sist="history 0 | grep"
+alias hist="history -E"
+alias sist="history -E 0 | grep"
 
 # Homebrew aliases
 alias bup="brew upgrade && brew update"
