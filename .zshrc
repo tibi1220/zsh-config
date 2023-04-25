@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE

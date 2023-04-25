@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 function music itunes() {
   local APP_NAME=Music sw_vers=$(sw_vers -productVersion 2>/dev/null)

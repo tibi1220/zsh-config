@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # custom directories for zsh
 export ZSH_CUSTOM_PLUGINS=$ZDOTDIR/custom/plugins
