@@ -3,3 +3,4 @@
 .zsh_sessions
 .zsh_history
 .zshenv
+.DS_Store
