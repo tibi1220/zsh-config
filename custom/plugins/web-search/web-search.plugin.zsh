@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# ------------------------------------------------------------------------------
+# (Copied from OMZ)
+# (https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/sudo/sudo.plugin.zsh)
+# ------------------------------------------------------------------------------
+
 # web_search from terminal
 
 function open_command() {

@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# ------------------------------------------------------------------------------
+# (Copied from OMZ)
+# (https://github.com/ohmyzsh/ohmyzsh/)
+# ------------------------------------------------------------------------------
+
 function music itunes() {
   local APP_NAME=Music sw_vers=$(sw_vers -productVersion 2>/dev/null)
 
