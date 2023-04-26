@@ -15,8 +15,9 @@ alias fgrep='fgrep --color=auto'
 
 # Colored ls
 alias ls='ls --color=auto'
-alias ll='exa -la'
-alias la='exa -a'
+alias la='exa --icons -a'
+alias ll='exa --icons --group-directories-first -Bla'
+alias llg='exa --icons --group-directories-first --git -Bla'
 
 # Change to working directories
 alias r='cd /'
