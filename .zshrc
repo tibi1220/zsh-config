@@ -2,7 +2,6 @@
 
 # Source own files
 source "$ZDOTDIR/.zsh/options.zsh"
-source "$ZDOTDIR/.zsh/exports.zsh"
 source "$ZDOTDIR/.zsh/aliases.zsh"
 source "$ZDOTDIR/.zsh/prompt.zsh"
 source "$ZDOTDIR/.zsh/functions.zsh"

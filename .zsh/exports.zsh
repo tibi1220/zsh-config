@@ -1,11 +1,4 @@
-#!/usr/bin/env zsh
-
-# custom directories for zsh
-export ZSH_CUSTOM_PLUGINS=$ZDOTDIR/custom/plugins
-export ZSH_PLUGINS=$ZDOTDIR/plugins
-export ZSHRC=$ZDOTDIR/.zshrc
-
-# other custom directories
+# Custom directories
 export CONFIGDIR=$HOME/.config
 export CODEDIR=$HOME/Documents/Code
 export LATEXDIR=$HOME/Documents/LaTeX
@@ -15,22 +8,6 @@ export VIMRC=$VIMDIR/init.lua
 # Git verify commits
 export GPG_TTY=$(tty)
 
-# directories
-# source $HOME/.cargo/env
-
 # Puppeter chromium fix
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
-
-# brew generated code
-export HOMEBREW_PREFIX="/opt/homebrew"
-export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
-export HOMEBREW_REPOSITORY="/opt/homebrew"
-export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
-export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
-
-# Export path
-PATH="/opt/homebrew/bin${PATH+:$PATH}"
-PATH="/opt/homebrew/sbin${PATH+:$PATH}"
-PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-PATH="$PATH:$ZDOTDIR/scripts"
