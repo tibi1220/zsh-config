@@ -13,11 +13,10 @@ export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 
 # Export path
-PATH="/opt/homebrew/bin${PATH+:$PATH}"
-PATH="/opt/homebrew/sbin${PATH+:$PATH}"
-PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-PATH="$PATH:$ZDOTDIR/scripts"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # Code editors
 export EDITOR=nvim
-export VISUAL=code
+export VISUAL=nvim

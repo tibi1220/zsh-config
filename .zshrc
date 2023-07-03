@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # Source own files
+source "$ZDOTDIR/.zsh/env.zsh"
 source "$ZDOTDIR/.zsh/options.zsh"
 source "$ZDOTDIR/.zsh/aliases.zsh"
 source "$ZDOTDIR/.zsh/prompt.zsh"
