@@ -23,6 +23,7 @@ alias llg='exa --icons --group-directories-first --git -Bla'
 alias r='cd /'
 alias c="cd $CODEDIR"
 alias l="cd $LATEXDIR"
+alias w="cd $WORKDIR"
 alias z="cd $ZDOTDIR"
 alias v="cd $VIMDIR"
 alias bme='cd ~/Documents/00BMEGE'

@@ -2,6 +2,7 @@
 export CONFIGDIR=$HOME/.config
 export CODEDIR=$HOME/Documents/Code
 export LATEXDIR=$HOME/Documents/LaTeX
+export WORKDIR=$HOME/Documents/WORK
 export VIMDIR=$HOME/.config/nvim
 export VIMRC=$VIMDIR/init.lua
 
