@@ -5,6 +5,7 @@ export LATEXDIR=$HOME/Documents/LaTeX
 export WORKDIR=$HOME/Documents/WORK
 export VIMDIR=$HOME/.config/nvim
 export VIMRC=$VIMDIR/init.lua
+export THEOS=~/theos
 
 # Git verify commits
 export GPG_TTY=$(tty)

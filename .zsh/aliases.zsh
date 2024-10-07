@@ -15,9 +15,9 @@ alias fgrep='fgrep --color=auto'
 
 # Colored ls
 alias ls='ls --color=auto'
-alias la='exa --icons -a'
-alias ll='exa --icons --group-directories-first -Bla'
-alias llg='exa --icons --group-directories-first --git -Bla'
+alias la='eza --icons -a'
+alias ll='eza --icons --group-directories-first -Bla'
+alias llg='eza --icons --group-directories-first --git -Bla'
 
 # Change to working directories
 alias r='cd /'
@@ -27,7 +27,7 @@ alias w="cd $WORKDIR"
 alias z="cd $ZDOTDIR"
 alias v="cd $VIMDIR"
 alias bme='cd ~/Documents/00BMEGE'
-alias cme='cd ~/Documents/00BMEGE/2022-23-t'
+alias cme='cd ~/Documents/00BMEGE/2024-25-o'
 
 # History
 alias hist="history -E"

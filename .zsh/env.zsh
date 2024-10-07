@@ -16,6 +16,8 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/theos/bin"
 
 # Code editors
 export EDITOR=nvim
